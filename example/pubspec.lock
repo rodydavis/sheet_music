@@ -229,11 +229,9 @@ packages:
   tonic:
     dependency: transitive
     description:
-      path: "."
-      ref: master
-      resolved-ref: "16c857c8535ffe5aadcc85fdb50522e8b8a64f80"
-      url: "https://github.com/EParisot/dart-tonic.git"
-    source: git
+      name: tonic
+      url: "https://pub.dartlang.org"
+    source: hosted
     version: "0.2.4"
   typed_data:
     dependency: transitive

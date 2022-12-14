@@ -1,5 +1,3 @@
-publish_to: none
-
 name: sheet_music
 description: A Flutter Widget for Sheet Music (All Major Flat and Sharp Scales, Notes from 5 below and 5 above the bar, Treble and Bass Clef).
 version: 0.3.0
@@ -11,10 +9,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  tonic:
-    git:
-      url: https://github.com/EParisot/dart-tonic.git
-      ref: master # branch name
+  tonic: ^0.2.4
 
 dev_dependencies:
   flutter_test:
