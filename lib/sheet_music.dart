@@ -45,7 +45,8 @@ class SheetMusic extends StatelessWidget {
     this.height,
   });
 
-  Widget _buildClef({required double width, double? height, bool dark = false}) {
+  Widget _buildClef(
+      {required double width, double? height, bool dark = false}) {
     final double _width = width * 0.1979;
     if (dark) {
       return Container(
@@ -55,7 +56,7 @@ class SheetMusic extends StatelessWidget {
             height: height,
             width: _width,
             child: Image.asset(
-              getClefAsset(trebleClef!),
+              getClefAsset(trebleClef ?? true),
               package: sheetMusicPackageName,
               fit: BoxFit.fitWidth,
               colorBlendMode: BlendMode.srcATop,
@@ -72,7 +73,7 @@ class SheetMusic extends StatelessWidget {
           height: height,
           width: _width,
           child: Image.asset(
-            getClefAsset(trebleClef!),
+            getClefAsset(trebleClef ?? true),
             package: sheetMusicPackageName,
             fit: BoxFit.fitWidth,
             colorBlendMode: BlendMode.srcATop,
@@ -83,7 +84,8 @@ class SheetMusic extends StatelessWidget {
     );
   }
 
-  Widget _buildScale({required double width, double? height, bool dark = false}) {
+  Widget _buildScale(
+      {required double width, double? height, bool dark = false}) {
     final double _width = width * 0.5076;
     if (dark) {
       return Container(
@@ -93,7 +95,7 @@ class SheetMusic extends StatelessWidget {
             height: height,
             width: _width,
             child: Image.asset(
-              getScaleAsset(scale!, trebleClef: trebleClef),
+              getScaleAsset(scale ?? "C Major", trebleClef: trebleClef),
               package: sheetMusicPackageName,
               fit: BoxFit.fitWidth,
               colorBlendMode: BlendMode.srcATop,
@@ -110,7 +112,7 @@ class SheetMusic extends StatelessWidget {
           height: height,
           width: _width,
           child: Image.asset(
-            getScaleAsset(scale!, trebleClef: trebleClef),
+            getScaleAsset(scale ?? "C Major", trebleClef: trebleClef),
             package: sheetMusicPackageName,
             fit: BoxFit.fitWidth,
             colorBlendMode: BlendMode.srcATop,
@@ -121,7 +123,8 @@ class SheetMusic extends StatelessWidget {
     );
   }
 
-  Widget _buildPitch({required double width, double? height, bool dark = false}) {
+  Widget _buildPitch(
+      {required double width, double? height, bool dark = false}) {
     final double _width = width * 0.2944;
     if (dark) {
       return Container(
@@ -131,7 +134,7 @@ class SheetMusic extends StatelessWidget {
             height: height,
             width: _width,
             child: Image.asset(
-              getPitchAsset(pitch!, trebleClef: trebleClef),
+              getPitchAsset(pitch ?? "C4", trebleClef: trebleClef),
               package: sheetMusicPackageName,
               fit: BoxFit.fitWidth,
               colorBlendMode: BlendMode.srcATop,
@@ -148,7 +151,7 @@ class SheetMusic extends StatelessWidget {
           height: height,
           width: _width,
           child: Image.asset(
-            getPitchAsset(pitch!, trebleClef: trebleClef),
+            getPitchAsset(pitch ?? "C4", trebleClef: trebleClef),
             package: sheetMusicPackageName,
             fit: BoxFit.fitWidth,
             colorBlendMode: BlendMode.srcATop,
