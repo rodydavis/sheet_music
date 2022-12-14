@@ -26,7 +26,7 @@ class SheetMusicExampleState extends State<SheetMusicExample> {
             ListTile(
               title: Text(
                 'Scales',
-                style: Theme.of(context).textTheme.display1,
+                style: Theme.of(context).textTheme.displayMedium,
               ),
             ),
             Expanded(
@@ -76,7 +76,7 @@ class SheetMusicExampleState extends State<SheetMusicExample> {
             ListTile(
               title: Text(
                 'Notes',
-                style: Theme.of(context).textTheme.display1,
+                style: Theme.of(context).textTheme.displayMedium,
               ),
             ),
             Expanded(
