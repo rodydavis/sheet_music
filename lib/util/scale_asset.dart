@@ -1,8 +1,8 @@
 import '../models/scale.dart';
 import 'assets.dart';
 
-String getScaleAsset(String scale, {bool trebleClef}) {
-  final PossibleScales _scale = ScaleInfo.parse(scale).scale;
+String getScaleAsset(String scale, {bool? trebleClef}) {
+  final PossibleScales? _scale = ScaleInfo.parse(scale).scale;
   if (trebleClef != null && trebleClef) {
     switch (_scale) {
       case PossibleScales.cMajor:

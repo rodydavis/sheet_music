@@ -5,8 +5,8 @@ enum PitchType { c, d, f, g, a, b }
 enum PitchTune { sharp, flat, natural }
 
 class PitchInfo {
-  final PitchType type;
-  final PitchTune tune;
+  final PitchType? type;
+  final PitchTune? tune;
 
   PitchInfo({this.tune, this.type});
 

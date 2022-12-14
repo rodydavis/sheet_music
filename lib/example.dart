@@ -13,9 +13,9 @@ class SheetMusicExample extends StatefulWidget {
 }
 
 class SheetMusicExampleState extends State<SheetMusicExample> {
-  String name, number, scale, pitch, timeSignature, source, notes, id;
-  bool coda, chorus, trebleClef;
-  int verses, count;
+  String? name, number, scale, pitch, timeSignature, source, notes, id;
+  bool? coda, chorus, trebleClef;
+  int? verses, count;
 
   void _pickScale(BuildContext context) {
     showModalBottomSheet<String>(
@@ -57,7 +57,7 @@ class SheetMusicExampleState extends State<SheetMusicExample> {
                       );
                     })),
           ]));
-        }).then((String value) {
+        }).then((String? value) {
       if (value != null) {
         setState(() => scale = value);
       }
@@ -65,7 +65,7 @@ class SheetMusicExampleState extends State<SheetMusicExample> {
   }
 
   void _pickPitch(BuildContext context) {
-    final List<String> _notesList = trebleClef
+    final List<String> _notesList = trebleClef!
         ? pitchesTreble.reversed.toList()
         : pitchesBass.reversed.toList();
     showModalBottomSheet<String>(
@@ -112,7 +112,7 @@ class SheetMusicExampleState extends State<SheetMusicExample> {
               ),
             ),
           ]));
-        }).then((String value) {
+        }).then((String? value) {
       if (value != null) {
         setState(() => pitch = value);
       }
@@ -140,7 +140,7 @@ class SheetMusicExampleState extends State<SheetMusicExample> {
                 trebleClef: trebleClef,
                 scale: scale,
                 pitch: pitch,
-                clefTap: () => setState(() => trebleClef = !trebleClef),
+                clefTap: () => setState(() => trebleClef = !trebleClef!),
                 scaleTap: () => _pickScale(context),
                 pitchTap: () => _pickPitch(context),
               ),
