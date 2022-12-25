@@ -19,8 +19,8 @@ enum PossibleScales {
 }
 
 class ScaleInfo {
-  final PossibleScales scale;
-  final String name, pattern, note;
+  final PossibleScales? scale;
+  final String? name, pattern, note;
 
   ScaleInfo({this.scale, this.name, this.pattern, this.note});
 
@@ -114,7 +114,7 @@ class ScaleInfo {
   }
 }
 
-Pitch getScaleRoot(String scaleName) {
+Pitch? getScaleRoot(String scaleName) {
   final Pitch _root = Chord.parse(scaleName).root;
   final String _newRoot =
       _root.toString().replaceAllMapped(new RegExp(r'[0-9]'), (Match match) {

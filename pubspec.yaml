@@ -1,16 +1,15 @@
 name: sheet_music
 description: A Flutter Widget for Sheet Music (All Major Flat and Sharp Scales, Notes from 5 below and 5 above the bar, Treble and Bass Clef).
 version: 0.3.0
-author: Rody Davis <rody.davis.jr@gmail.com>
 homepage: https://github.com/rodydavis/plugins
 
 environment:
-  sdk: ">=2.0.0 <3.0.0"
+  sdk: '>=2.12.0 <3.0.0'
 
 dependencies:
   flutter:
     sdk: flutter
-  tonic: ^0.2.3
+  tonic: ^0.2.4
 
 dev_dependencies:
   flutter_test:
