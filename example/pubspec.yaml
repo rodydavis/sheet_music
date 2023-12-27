@@ -3,16 +3,16 @@ description: Demonstrates how to use the sheet_music plugin.
 publish_to: 'none'
 
 environment:
-  sdk: ">=2.12.0 <3.0.0"
+  sdk: '>=3.2.3 <4.0.0'
 
 dependencies:
   flutter:
     sdk: flutter
-  jaguar_flutter_asset: ^2.2.0
+  jaguar_flutter_asset: ^3.0.0
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^0.1.2
+  cupertino_icons: ^1.0.6
 
 dev_dependencies:
   flutter_test:
