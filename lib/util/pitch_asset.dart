@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 import '../models/scale.dart';
 import 'assets.dart';
 
@@ -202,6 +200,8 @@ String getPitchName({String? scale, required String pitch}) {
       if (pitch.contains("C")) return pitch.replaceAll("C", "C♭");
       if (pitch.contains("F")) return pitch.replaceAll("F", "F♭");
       break;
+    case null:
+      throw Exception('PossibleScales cannot be null');
   }
   return pitch;
 }

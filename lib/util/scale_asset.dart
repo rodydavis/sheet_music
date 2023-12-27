@@ -35,6 +35,8 @@ String getScaleAsset(String scale, {bool? trebleClef}) {
         return gbmajor_treble_asset;
       case PossibleScales.cbMajor:
         return cbmajor_treble_asset;
+      case null:
+        throw Exception('_scale cannot be null');
     }
   }
   switch (_scale) {
@@ -68,7 +70,7 @@ String getScaleAsset(String scale, {bool? trebleClef}) {
       return gbmajor_bass_asset;
     case PossibleScales.cbMajor:
       return cbmajor_bass_asset;
+    case null:
+      throw Exception('The provided scale cannot be null');
   }
-  // Default: C Major
-  return cmajor_bass_asset;
 }

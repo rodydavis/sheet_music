@@ -5,9 +5,6 @@ enum Step { DO, RE, MI, FA, SOL, LA, TI }
 Step updateStep(String scale, String pitch) {
   // print("Scale: $scale, Pitch: $pitch");
 
-  if (pitch == null) return Step.DO;
-  if (scale == null) return Step.DO;
-
   final PossibleScales? _scale = ScaleInfo.parse(scale).scale;
 
   switch (_scale) {
@@ -281,6 +278,8 @@ Step updateStep(String scale, String pitch) {
         return Step.TI;
       }
       break;
+    case null:
+      throw Exception('Pitch cannot be null');
   }
   return Step.DO;
 }
